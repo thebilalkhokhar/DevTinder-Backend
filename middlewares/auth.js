@@ -8,7 +8,8 @@ const userAuthMiddleware = async (req, res, next) => {
       return;
     }
 
-    const decodedMessage = await jwt.verify(token, "MySecretKey");
+    const decodedMessage = await jwt.verify(token, process.env.JWT_SECRET);
+
     const { _id } = decodedMessage;
 
     const user = await User.findById(_id);
