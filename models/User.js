@@ -64,6 +64,14 @@ const userSchema = new mongoose.Schema(
       // },
       default: "https://shorturl.at/3Vd0W",
     },
+    isPremium: {
+      type: Boolean,
+      default: false,
+    },
+    membershipType: {
+      type: String,
+      default: "free",
+    },
   },
   {
     timestamps: true,
