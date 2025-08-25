@@ -62,7 +62,7 @@ const userSchema = new mongoose.Schema(
       //     throw new Error("Invalid URL format for photo");
       //   }
       // },
-      default: "https://shorturl.at/3Vd0W",
+      default: "https://via.placeholder.com/400x200",
     },
     isPremium: {
       type: Boolean,
